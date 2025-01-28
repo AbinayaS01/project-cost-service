@@ -22,23 +22,23 @@ public class ProjectCostController {
     @Autowired
     public ProjectCostService costService;
 
-    @GetMapping("/projectvar/{pid}")
+    @GetMapping("/projectcost/{pid}")
     public ResponseEntity<ProjectCost> getProject(@PathVariable("pid") Long id) {
         return new ResponseEntity(costService.getCost(id), HttpStatus.OK);
     }
 
-    @PostMapping("/projectvar")
+    @PostMapping("/projectcost")
     public ResponseEntity<ProjectCost> addProject(@RequestBody ProjectCost newProj) {
         return new ResponseEntity(costService.addCost(newProj), HttpStatus.OK);
     }
 
-    @PutMapping("/projectvar")
+    @PutMapping("/projectcost")
     public ResponseEntity<ProjectCost> updateProject(
             @RequestBody ProjectCost updatedProj) {
         return new ResponseEntity(costService.updateCost(updatedProj), HttpStatus.OK);
     }
 
-    @DeleteMapping("/projectvar/{pid}")
+    @DeleteMapping("/projectcost/{pid}")
     public ResponseEntity<Void> deleteProject(@PathVariable("pid") Long id) {
         costService.deleteCost(id);
         return new ResponseEntity(HttpStatus.OK);
