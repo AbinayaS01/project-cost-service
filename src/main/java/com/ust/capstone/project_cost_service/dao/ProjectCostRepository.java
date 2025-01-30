@@ -7,5 +7,6 @@ import com.ust.capstone.project_cost_service.dao.entity.ProjectCost;
 
 @Repository
 public interface ProjectCostRepository extends JpaRepository<ProjectCost, Long> {
+    ProjectCost findByProjTypCatVarId(Long projectId);
 
 }

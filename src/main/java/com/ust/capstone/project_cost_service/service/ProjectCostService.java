@@ -27,5 +27,8 @@ public class ProjectCostService {
     public void deleteCost(Long id) {
         costRepo.deleteById(id);
     }
+    public ProjectCost getProjectCostByVarId(Long varId) {
+        return costRepo.findByProjTypCatVarId(varId);
+    }
 
 }
