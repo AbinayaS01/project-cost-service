@@ -43,5 +43,9 @@ public class ProjectCostController {
         costService.deleteCost(id);
         return new ResponseEntity(HttpStatus.OK);
     }
+    @GetMapping("/projectcosts/variation/{vid}")
+    public ResponseEntity<ProjectCost> getProjectsByVariation(@PathVariable("vid") Long id) {
+        return new ResponseEntity<ProjectCost>(costService.getProjectCostByVarId(id), HttpStatus.OK);
+    }
 
 }

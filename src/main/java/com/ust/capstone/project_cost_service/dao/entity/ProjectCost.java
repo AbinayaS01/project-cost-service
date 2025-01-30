@@ -22,17 +22,17 @@ public class ProjectCost {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "project_cost_id")
-    private Long ProjTypCatCostBreakdown_id;
+    private Long projTypCatCostBreakdown_id;
 
     @Column(name = "profit_cost")
-    private double ProfitCost;
+    private double profitCost;
 
     @Column(name = "labour_cost")
-    private double LabourCost;
+    private double labourCost;
 
     @Column(name = "material_cost")
-    private double MaterialCost;
+    private double materialCost;
 
     @Column(name = "variation_id")
-    private Long ProjTypCatVarId;
+    private Long projTypCatVarId;
 }
